@@ -497,9 +497,11 @@
     #define DEFAULT_Ki_LIST {   1.00,   1.00 }
     #define DEFAULT_Kd_LIST {  98.93,  98.93 }
   #else
-    #define DEFAULT_Kp  19.86
-    #define DEFAULT_Ki   1.00
-    #define DEFAULT_Kd  98.93
+  // steinerbrd: autotune ergibt Kp: 14.17 Ki: 0.57 Kd: 88.23
+  // alte werte: Kp: 19.86, Ki: 1.00, Kd 98.93
+    #define DEFAULT_Kp  14.17
+    #define DEFAULT_Ki   0.57
+    #define DEFAULT_Kd  88.23
   #endif
 #endif // PIDTEMP
 
