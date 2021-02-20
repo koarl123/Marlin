@@ -16,11 +16,22 @@ Marlin 2.0 takes this popular RepRap firmware to the next level by adding suppor
 
 Download earlier versions of Marlin on the [Releases page](https://github.com/MarlinFirmware/Marlin/releases).
 
-## Steps before flashing new firmware
-1. get info about bed temp PID control
-2. check movement directions
-3. make video of homing
+## Steinerbrd: Steps before flashing new firmware
+1. Saubere Verkabelung aller JST-XH Stecker
+2. Sensorless homing nochmal ausprobieren
+    1. Wenn X/Y Endstop verkabelt -> Jumper weg
+    2. Extruder-Jumper setzen (hier hamma keinen Endstop) TODO Sensitivity einstellen?
+3. Kapazitiven Sensor anbauen: 
+    1. Die Halterung für den kapazitiven Sensor drucken -> done
+    2. Pullup ca. 10kOhm; hier müssma unbedingt die 1N4148 Diode (oder 2 in Serie, zur Sicherheit) in Sperr-Richtung gegen den Signal-Ausgang des Sensors anbringen!! Mehrfach prüfen!!
+    3. Danach in configuration.h NOZZLE_TO_PROBE_OFFSET einstellen, siehe [M851](https://marlinfw.org/docs/gcode/M851.html)
+    4. Sensor an 12V Spannung anstecken, am besten bei VIN (12V nach der Sicherung) -> nachmessen!
 
+## Steinerbrd: Next Level
+1. TFT Mount drucken? z.B [des](https://www.thingiverse.com/thing:3954074)
+1. Board-Luefter
+2. Neopixel LEDs: hier die Zwischenbeschaltung 5VDC Board <-> Neopixel durchdenken (Inrush-Current!)
+3. V6 Metall Druckkopf mit Bowden-Extruder
 
 ## Building Marlin 2.0
 
