@@ -17,42 +17,21 @@ Marlin 2.0 takes this popular RepRap firmware to the next level by adding suppor
 Download earlier versions of Marlin on the [Releases page](https://github.com/MarlinFirmware/Marlin/releases).
 
 ## Steinerbrd: Steps before flashing new firmware
-1. Foto vom ANet A8 Board und der Verkabelung machen, schadet ned
-2. Aderendhülsen an die Hochstrom-Kabel (falls nicht vorhanden):
-    1. Bettheizung
-    2. Druckkopfheizung
-    3. Spannungsversorgung vom Netzteil
-3. Motorverkabelung prüfen: A1 und A2 sind eine Spule, B1 und B2 die andere, siehe [Datenblatt](https://www.trinamic.com/fileadmin/assets/Products/ICs_Documents/TMC2209_Datasheet_V103.pdf)
-4. EEPROM Emulation auf SD-Karte, siehe [Link](https://github.com/bigtreetech/BIGTREETECH-SKR-mini-E3/blob/master/SKR%20MINI%20E3%26E3%20DIP%20eeprom.txt)
-5. Alle Jumper prüfen:
+1. Saubere Verkabelung aller JST-XH Stecker
+2. Sensorless homing nochmal ausprobieren
     1. Wenn X/Y Endstop verkabelt -> Jumper weg
     2. Extruder-Jumper setzen (hier hamma keinen Endstop) TODO Sensitivity einstellen?
-    3. Neopixel-Jumper kömma auf interne VCC legen -> Jumper rechts, siehe Anleitung
-6. Temperaturregelung:
-    1. Bett: thermal runaway -> Analyse der Heizkurve
-    2. Druckkopf: PID Autotune + Werte einstellen
-7. Display verbinden:
-    1. 5V vom Board müssten parallel zum Neopixel klappen
-    2. TFT-Leitung verwenden. In der Firmware ist der SERIAL_PORT_2 dafuer aktiviert
-8. Drucker einschalten -> alle Richtungen, Endstops usw. prüfen
-9. Kapazitiven Sensor anbauen: 
-    1. Die Halterung für den kapazitiven Sensor drucken?
-    2. Hier müssma unbedingt die 1N4148 Diode (oder 2 in Serie, zur Sicherheit) in Sperr-Richtung gegen den Signal-Ausgang des Sensors anbringen!! Mehrfach prüfen!!
+3. Kapazitiven Sensor anbauen: 
+    1. Die Halterung für den kapazitiven Sensor drucken -> done
+    2. Pullup ca. 10kOhm; hier müssma unbedingt die 1N4148 Diode (oder 2 in Serie, zur Sicherheit) in Sperr-Richtung gegen den Signal-Ausgang des Sensors anbringen!! Mehrfach prüfen!!
     3. Danach in configuration.h NOZZLE_TO_PROBE_OFFSET einstellen, siehe [M851](https://marlinfw.org/docs/gcode/M851.html)
     4. Sensor an 12V Spannung anstecken, am besten bei VIN (12V nach der Sicherung) -> nachmessen!
 
-10. Software-Tweaking:
-    1. configuration.h: S_CURVE_ACCELERATION
-    2. configuration_adv.h: BABYSTEPPING, siehe [Dude](http://3dprintfaq.com/index.php?action=artikel&cat=3&id=10&artlang=en)
-    3. Z Probe autoleveling!
-
-
 ## Steinerbrd: Next Level
 1. TFT Mount drucken? z.B [des](https://www.thingiverse.com/thing:3954074)
-1. Irgendwann kommt noch ein Board-Lüfter, sowas kommt immer cool daher!
-2. Neopixel LEDs kommen aa no!
-3. Teh Bowden-Zug Extruder Mod -> da müssma was dafür drucken. Aber dann --> Speedup beim Drucken 
-4. 
+1. Board-Luefter
+2. Neopixel LEDs: hier die Zwischenbeschaltung 5VDC Board <-> Neopixel durchdenken (Inrush-Current!)
+3. V6 Metall Druckkopf mit Bowden-Extruder
 
 ## Building Marlin 2.0
 
