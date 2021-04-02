@@ -34,7 +34,7 @@ Download earlier versions of Marlin on the [Releases page](https://github.com/Ma
 3. V6 Metall Druckkopf mit Bowden-Extruder
 
 ## Steinerbrd: Uebernaechstes Level: Rahmenupgrade
-[Sachen zu drucken] (https://www.thingiverse.com/thing:2263216)
+[Sachen zu drucken](https://www.thingiverse.com/thing:2263216)
 
 
 Sachen zu kaufen:
@@ -46,6 +46,7 @@ Groesse des neuen Druckers bzw. Bettsize muss noch geklaert werden!!!
 5. Linearlager (X-Achse: 4, Y-Achse: 4, Z-Achse: 2 ==> wenn alle lager ersetzt werden sollen)
 6. Linearfuehrungen (X-Achse: 2, Y-Achse: 2, Z-Achse: 2 ==> y Linearfuerhungen koennen evtl. behalten werden)
 7. Z Axis Coupling (2 Stk.)
+8. Teil, das unter das Bett kommt (==> damit mit der neuen y-Motorhalterung keine Kollision auftritt)
 
 
 ## Building Marlin 2.0
