@@ -34,7 +34,7 @@ Download earlier versions of Marlin on the [Releases page](https://github.com/Ma
 3. V6 Metall Druckkopf mit Bowden-Extruder
 
 ## Steinerbrd: Uebernaechstes Level: Rahmenupgrade
-[Sachen zu drucken] https://www.thingiverse.com/thing:2263216
+[Sachen zu drucken] (https://www.thingiverse.com/thing:2263216)
 
 
 Sachen zu kaufen:
