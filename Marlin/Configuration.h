@@ -71,7 +71,7 @@
 // @section info
 
 // Author info of this build printed to the host during boot and M115
-#define STRING_CONFIG_H_AUTHOR "(Steiner Made, CTC i3 Pro B)" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "(Steiner Made, CTC Upgrade)" // Who made the changes.
 //#define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
 
 /**
@@ -1415,16 +1415,16 @@
 // @section machine
 
 // The size of the printable area
-#define X_BED_SIZE 186
-#define Y_BED_SIZE 190
+#define X_BED_SIZE 200
+#define Y_BED_SIZE 200
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
-#define X_MIN_POS 0
-#define Y_MIN_POS -10
+#define X_MIN_POS -14
+#define Y_MIN_POS -12
 #define Z_MIN_POS 0
 #define X_MAX_POS (-X_MIN_POS+X_BED_SIZE)
 #define Y_MAX_POS (-Y_MIN_POS+Y_BED_SIZE)
-#define Z_MAX_POS 195
+#define Z_MAX_POS 210
 //#define I_MIN_POS 0
 //#define I_MAX_POS 50
 //#define J_MIN_POS 0
